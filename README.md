@@ -35,10 +35,12 @@ Transaction hash: 0x3bf190223b52be890f4542ac136d1307bf1eb37f7b6241d62ed56a502b82
 
 3)
 starknet call --address ${CONTRACT_ADDRESS} --abi abi.json --function get_balance
+
 13445 ---> It is the input we gave in the last command. (0 + 13445 = 13445)
 
 4)
 starknet invoke --address ${CONTRACT_ADDRESS} --abi abi.json --function increase_balance --inputs 10000 --account myAcSha
+
 Sending the transaction with max_fee: 0.000000 ETH.
 Invoke transaction was sent.
 Contract address: 0x06d425a7fa9d38c03a7bced43cf8d171a45e8c7027c0bd806f8ca9706c4a3a3d
@@ -46,6 +48,7 @@ Transaction hash: 0x32710c0332211dbe339da73a8136014b19e67d7c728079f97343bb3e96dc
 
 5)
 starknet call --address ${CONTRACT_ADDRESS} --abi abi.json --function get_balance
+
 23455 ---->>>  It is because of the input we gave in the last command. (13445 + 10000  = 23455)
 
 # ****** Last transaction on Voyager ****** 

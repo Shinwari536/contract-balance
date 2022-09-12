@@ -17,8 +17,6 @@
 ********************** INTERACTION WITH DEPLOYED CONTRACT **********************
 
 16- starknet call --address ${CONTRACT_ADDRESS} --abi abi.json --function get_balance  --->>> Read function get_balance()
-17- 
-18- 
-19- 
-20- 
+17- starknet invoke --address ${CONTRACT_ADDRESS} --abi abi.json --function increase_balance --inputs 10000 --account myAcSha
+
 
