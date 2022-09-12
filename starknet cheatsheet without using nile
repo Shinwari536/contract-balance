@@ -1,0 +1,24 @@
+1- Create a folder
+2- python3 -m venv ~/cairo_venv
+3- source ~/cairo_venv/bin/activate
+4- pip3 install ecdsa fastecdsa sympy
+5- sudo apt install -y libgmp3-dev
+6- pip3 install cairo-lang
+7- export STARKNET_NETWORK=alpha-goerli
+8- export STARKNET_WALLET=starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount
+9-  starknet deploy_account --account=${ACCOUNT_NAME}  ACCOUNT_NAME--->>> myAcSha
+10- starknet tx_status --hash 0x213e352ed34d7ff63e3abb03b41ae7d7ef76689ce306b78681effeb94a660de --> To check status of the trx
+11- Copy Contract and Public key address and go to faucet and get some Goerli ETH
+12- starknet-compile AddNumbers.cairo --output num_compiled.json --abi abi.json  -->>> will compile the file name "AddNumbers.cairo" 
+13- starknet declare --contract num_compiled.json --account myAcSha -->>> myAcSha is the account we have declare already.
+14- starknet deploy --class_hash 0x68704d18de8ccf71da7c9761ee53efd44dcfcfd512eddfac9c396e7d175e234 --account=myAcSha
+15- export CONTRACT_ADDRESS=0x06d425a7fa9d38c03a7bced43cf8d171a45e8c7027c0bd806f8ca9706c4a3a3d --->>>> You’ll need this address to interact with the contract. This eexport will make it easy for us and will save the contract address in environment variables.
+
+********************** INTERACTION WITH DEPLOYED CONTRACT **********************
+
+16- starknet call --address ${CONTRACT_ADDRESS} --abi abi.json --function get_balance  --->>> Read function get_balance()
+17- 
+18- 
+19- 
+20- 
+
