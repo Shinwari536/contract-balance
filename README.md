@@ -51,5 +51,15 @@ starknet call --address ${CONTRACT_ADDRESS} --abi abi.json --function get_balanc
 
 23455 ---->>>  It is because of the input we gave in the last command. (13445 + 10000  = 23455)
 
+6)
+# Estimate fee
+You can estimate the fee of a given transaction before executing it by adding the --estimate_fee flag to the invoke or declare commands. This will simulate the transaction and return the estimated fee associated with it. The result is presented in WEI and ETH, as shown below.
+
+starknet invoke --address 0x06d425a7fa9d38c03a7bced43cf8d171a45e8c7027c0bd806f8ca9706c4a3a3d --abi abi.json --function increase_balance --inputs 10000 --account myAcSha --network alpha-goerli --estimate_fee
+
+The estimated fee is: 49169705469 WEI (0.000000 ETH).
+Gas usage: 3867
+Gas price: 12715207 WEI
+
 # ****** Last transaction on Voyager ****** 
 https://goerli.voyager.online/tx/0x32710c0332211dbe339da73a8136014b19e67d7c728079f97343bb3e96dcb1a
