@@ -53,7 +53,10 @@ starknet call --address ${CONTRACT_ADDRESS} --abi abi.json --function get_balanc
 
 6)
 # Estimate fee
-You can estimate the fee of a given transaction before executing it by adding the --estimate_fee flag to the invoke or declare commands. This will simulate the transaction and return the estimated fee associated with it. The result is presented in WEI and ETH, as shown below.
+You can estimate the fee of a given transaction before executing it by adding the --estimate_fee flag to the invoke or declare commands. This will simulate the transaction and return the estimated fee associated with it. The result is presented in WEI and ETH, as shown below. 
+Note: With the --estimate_fee flag, the state of the contracts does not change. For example, the following code will not affect the balance stored in BALANCE_CONTRACT.
+
+To estimate the fee of a given transaction run the following:
 
 starknet invoke --address 0x06d425a7fa9d38c03a7bced43cf8d171a45e8c7027c0bd806f8ca9706c4a3a3d --abi abi.json --function increase_balance --inputs 10000 --account myAcSha --network alpha-goerli --estimate_fee
 
